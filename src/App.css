@@ -12,7 +12,15 @@
 .round:hover  .img{
   transform: rotate( -30deg) scale(0.9);
 }
-
+.line{
+  transition: all 0.5s;
+}
+.listview:hover{
+    cursor: pointer;
+}
+.listview:hover .line{
+   width: 100%;
+}
 .round:hover .box{
   left: 0.5rem;
   opacity: 1;

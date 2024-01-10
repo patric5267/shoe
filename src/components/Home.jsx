@@ -41,7 +41,7 @@ import { IoPerson } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion'
 const Home = () => {
-    const[close , setClose] = useState(false)
+    const [close, setClose] = useState(false)
     const [img, setImg] = useState(p1)
     const [img2, setImg2] = useState(s1)
     const [img3, setImg3] = useState(b1)
@@ -67,23 +67,23 @@ const Home = () => {
         },
     ]
     const boxvariant = {
-        hidden:{
-            opacity:0
+        hidden: {
+            opacity: 0
         },
-        visible:{
-            opacity:1,
-            transition:{
-                when:"beforeChildren",
-                staggerChildren:0.2
+        visible: {
+            opacity: 1,
+            transition: {
+                when: "beforeChildren",
+                staggerChildren: 0.2
             }
         }
     }
-    const listvariant ={
-        hidden:{
-            opacity:0
+    const listvariant = {
+        hidden: {
+            opacity: 0
         },
-        visible:{
-            opacity:1,
+        visible: {
+            opacity: 1,
         }
     }
     return (
@@ -93,13 +93,28 @@ const Home = () => {
                     <div className="logo">
                         <h1 className=' font-medium text-2xl'>LOGO</h1>
                     </div>
-                    <IoIosMenu onClick={()=>setClose(true)} className=' text-2xl lg:hidden' />
+                    <IoIosMenu onClick={() => setClose(true)} className=' text-2xl lg:hidden' />
                     <ul className='hidden lg:flex items-center text-lg font-medium text-gray-400'>
-                        <li className=' mr-4'>HOME</li>
-                        <li className=' mr-4'>PRODUCT</li>
-                        <li className=' mr-4'>FEATURED</li>
-                        <li className=' mr-4'>BLOG</li>
-                        <Link to='/shoe'><li className=' mr-4'>SHOP</li>
+                        <li className=' mr-4  listview'>
+                            <p>HOME</p>
+                            <div className="line bg-black w-0 h-1 "></div>
+                        </li>
+                        <li className=' mr-4 listview'>
+                            <p>PRODUCTS</p>
+                            <div className="line bg-black w-0 h-1 "></div>
+                        </li>
+                        <li className=' mr-4 listview'>
+                            <p>FEATURED</p>
+                            <div className="line bg-black w-0 h-1 "></div>
+                        </li>
+                        <li className=' mr-4 listview'>
+                            <p>BLOG</p>
+                            <div className="line bg-black w-0 h-1 "></div>
+                        </li>
+                        <Link to='/shoe'><li className=' mr-4 listview'>
+                            <p>SHOP</p>
+                            <div className="line bg-black w-0 h-1 "></div>
+                        </li>
                         </Link>
                     </ul>
                     <ul className='hidden lg:flex text-lg font-medium'>
@@ -154,7 +169,7 @@ const Home = () => {
                                     duration: 1.5
                                 }}
                                 className="img mt-4 sm:mt-0 ">
-                                <img src={i.img} alt="" className='mainimg'/>
+                                <img src={i.img} alt="" className='mainimg' />
                             </motion.div>
                         </div>)
                     }
@@ -376,92 +391,92 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className=' xl:flex xl:justify-center mt-7 md:mt-16 '> 
-              <div className="grid grid-cols-2 md:grid-cols-5 mt-7  xl:w-[80rem] px-3">
-                <div>
-                <h1 className=' font-medium text-lg'>PRODUCTS</h1>
-                 <ul className=' text-gray-400 mt-5'>
-                    <li className=' mb-2'>Footwear</li>
-                    <li className=' mb-2'>Clothing</li>
-                    <li className=' mb-2'>Acessories</li>
-                 </ul>
-                 <ul  className=' text-gray-400 mt-5'>
-                    <li className=' mb-2'>Outlet-sale</li>
-                    <li className=' mb-2'>New Arrivals</li>
-                    <li className=' mb-2' >Special Offer</li>
-                    <li lassName=' mb-2'>Flat 20% discount</li>
-                 </ul>
+            <div className=' xl:flex xl:justify-center mt-7 md:mt-16 '>
+                <div className="grid grid-cols-2 md:grid-cols-5 mt-7  xl:w-[80rem] px-3">
+                    <div>
+                        <h1 className=' font-medium text-lg'>PRODUCTS</h1>
+                        <ul className=' text-gray-400 mt-5'>
+                            <li className=' mb-2'>Footwear</li>
+                            <li className=' mb-2'>Clothing</li>
+                            <li className=' mb-2'>Acessories</li>
+                        </ul>
+                        <ul className=' text-gray-400 mt-5'>
+                            <li className=' mb-2'>Outlet-sale</li>
+                            <li className=' mb-2'>New Arrivals</li>
+                            <li className=' mb-2' >Special Offer</li>
+                            <li lassName=' mb-2'>Flat 20% discount</li>
+                        </ul>
+                    </div>
+                    <div className=''>
+                        <h1 className=' font-medium text-lg'>SPORTS</h1>
+                        <ul className=' text-gray-400 mt-5'>
+                            <li className=' mb-2'>Cricket</li>
+                            <li className=' mb-2'>Football</li>
+                            <li className='mb-2'>Running</li>
+                            <li className=' mb-2'>Gym</li>
+                            <li className='mb-2'>Tennis</li>
+                            <li className='mb-2'>Outdoor</li>
+                            <li className=' mb-2'>Basketball</li>
+                            <li className='mb-2'>Swimming</li>
+                            <li className='mb-2'>Skating</li>
+                        </ul>
+                    </div>
+                    <div className=' mt-5 md:mt-0'>
+                        <h1 className=' font-medium text-lg'>COLLECTIONS</h1>
+                        <ul className=' text-gray-400 mt-5'>
+                            <li className=' mb-2'>Ultraboost</li>
+                            <li className=' mb-2'>Superstar</li>
+                            <li className='mb-2'>NMD</li>
+                            <li className=' mb-2'>Stan Smith</li>
+                            <li className='mb-2'>Sustainablity</li>
+                            <li className='mb-2'>Predator</li>
+                            <li className=' mb-2'>Partey</li>
+                            <li className='mb-2'>adicolor</li>
+                        </ul>
+                    </div>
+                    <div className=' mt-5 md:mt-0'>
+                        <h1 className=' font-medium text-lg'>SUPPPORT</h1>
+                        <ul className=' text-gray-400 mt-5'>
+                            <li className=' mb-2'>Help</li>
+                            <li className=' mb-2'>Customer Services</li>
+                            <li className='mb-2'>Returns & Exchanges</li>
+                            <li className=' mb-2'>Shipping</li>
+                            <li className='mb-2'>Order Tracker</li>
+                            <li className='mb-2'>Store Locator</li>
+                            <li className=' mb-2'>Running Shoe Finder</li>
+                            <li className='mb-2'>Tersms & Conditions</li>
+                        </ul>
+                    </div>
+                    <div className=' mt-5 md:mt-0'>
+                        <h1 className=' font-medium text-lg'>FOLLOW US</h1>
+                        <FaInstagramSquare className=' text-2xl my-3' />
+                    </div>
                 </div>
-                <div className=''>
-                <h1 className=' font-medium text-lg'>SPORTS</h1>
-                <ul  className=' text-gray-400 mt-5'>
-                  <li className=' mb-2'>Cricket</li>
-                  <li className=' mb-2'>Football</li>
-                  <li className ='mb-2'>Running</li>
-                  <li className=' mb-2'>Gym</li>
-                  <li className ='mb-2'>Tennis</li>
-                  <li className ='mb-2'>Outdoor</li>
-                  <li className=' mb-2'>Basketball</li>
-                  <li className ='mb-2'>Swimming</li>
-                  <li className ='mb-2'>Skating</li>
-                </ul>
-                </div>
-                <div className=' mt-5 md:mt-0'>
-                <h1 className=' font-medium text-lg'>COLLECTIONS</h1>
-                <ul  className=' text-gray-400 mt-5'>
-                  <li className=' mb-2'>Ultraboost</li>
-                  <li className=' mb-2'>Superstar</li>
-                  <li className ='mb-2'>NMD</li>
-                  <li className=' mb-2'>Stan Smith</li>
-                  <li className ='mb-2'>Sustainablity</li>
-                  <li className ='mb-2'>Predator</li>
-                  <li className=' mb-2'>Partey</li>
-                  <li className ='mb-2'>adicolor</li>
-                </ul>
-                </div>
-                <div className=' mt-5 md:mt-0'>
-                <h1 className=' font-medium text-lg'>SUPPPORT</h1>
-                <ul  className=' text-gray-400 mt-5'>
-                  <li className=' mb-2'>Help</li>
-                  <li className=' mb-2'>Customer Services</li>
-                  <li className ='mb-2'>Returns & Exchanges</li>
-                  <li className=' mb-2'>Shipping</li>
-                  <li className ='mb-2'>Order Tracker</li>
-                  <li className ='mb-2'>Store Locator</li>
-                  <li className=' mb-2'>Running Shoe Finder</li>
-                  <li className ='mb-2'>Tersms & Conditions</li>
-                </ul>
-                </div>
-                <div className=' mt-5 md:mt-0'>
-                <h1 className=' font-medium text-lg'>FOLLOW US</h1>
-                <FaInstagramSquare  className=' text-2xl my-3'/>
-                </div>
-              </div>
             </div>
             <div className=' xl:flex xl:justify-center'>
-            <div className=' xl:w-[80rem] mt-4 flex flex-col items-center ont-medium text-gray-400 py-6'>
-                <ul className='flex justify-center'>
-                    <li className=' mr-3'>Privacy |</li>
-                    <li className=' mr-3'>Terms |</li>
-                    <li className=' mr-3'>Support</li>
-                </ul>
-                <p className=' mt-3'>Since 20201 Indian Private Limited</p>
-              </div>
+                <div className=' xl:w-[80rem] mt-4 flex flex-col items-center ont-medium text-gray-400 py-6'>
+                    <ul className='flex justify-center'>
+                        <li className=' mr-3'>Privacy |</li>
+                        <li className=' mr-3'>Terms |</li>
+                        <li className=' mr-3'>Support</li>
+                    </ul>
+                    <p className=' mt-3'>Since 20201 Indian Private Limited</p>
+                </div>
             </div>
-          {close &&  <div className='forphone flex justify-center items-center screen fixed w-full h-full top-0 bg-white z-20'>
-             <motion.ul
-             variants={boxvariant}
-             animate="visible"
-             initial="hidden"
-             className=' font-medium text-xl text-gray-400'>
-                <motion.li variants={listvariant} className=' mb-3'>HOME</motion.li>
-                <motion.li variants={listvariant} className=' mb-3'>FEATURED</motion.li>
-                <motion.li variants={listvariant} className=' mb-3'>PRODUCTS</motion.li>
-                <motion.li variants={listvariant} className=' mb-3'>BLOG</motion.li>
-              <Link to='/shoe'><motion.li variants={listvariant} className=' mb-3'>SHOP</motion.li></Link>  
-             </motion.ul>
-             <IoMdCloseCircle onClick={()=>setClose(false)} className=' absolute top-3 text-3xl right-3' />
-            </div> }
+            {close && <div className='forphone flex justify-center items-center screen fixed w-full h-full top-0 bg-white z-20'>
+                <motion.ul
+                    variants={boxvariant}
+                    animate="visible"
+                    initial="hidden"
+                    className=' font-medium text-xl text-gray-400'>
+                    <motion.li variants={listvariant} className=' mb-3'>HOME</motion.li>
+                    <motion.li variants={listvariant} className=' mb-3'>FEATURED</motion.li>
+                    <motion.li variants={listvariant} className=' mb-3'>PRODUCTS</motion.li>
+                    <motion.li variants={listvariant} className=' mb-3'>BLOG</motion.li>
+                    <Link to='/shoe'><motion.li variants={listvariant} className=' mb-3'>SHOP</motion.li></Link>
+                </motion.ul>
+                <IoMdCloseCircle onClick={() => setClose(false)} className=' absolute top-3 text-3xl right-3' />
+            </div>}
         </>
     )
 }
