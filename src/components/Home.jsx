@@ -144,7 +144,6 @@ const Home = () => {
                                     opacity: 0
                                 }}
                                 animate={{
-
                                     scale: 1,
                                     opacity: 1
                                 }}
@@ -155,7 +154,7 @@ const Home = () => {
                                     duration: 1.5
                                 }}
                                 className="img mt-4 sm:mt-0 ">
-                                <img src={i.img} alt="" />
+                                <img src={i.img} alt="" className='mainimg'/>
                             </motion.div>
                         </div>)
                     }
